@@ -1,0 +1,14 @@
+.Menu{
+  text-align: center;
+}
+
+.title{
+  color: yellow;
+}
+
+.flavors{
+  display: inline-flex;
+  width: 80%;
+  justify-content: space-around;
+  padding: 10px 0 10px 0;
+}

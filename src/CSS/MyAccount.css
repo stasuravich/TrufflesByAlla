@@ -1,0 +1,63 @@
+.parent{
+  padding: 2em 0 2em 0;
+}
+
+.MyAccount{
+  width: 70%;
+  margin: auto;
+  text-align: left;
+  background-color: white;
+  padding:2em 5em 4em 5em;
+}
+
+.form{
+  border: 1px solid #C8C8C8;
+  padding: 2em;
+}
+
+.asteric{
+  color: red;
+}
+
+.input{
+  display: block;
+  width: 100%;
+  padding: 10px 0 10px 8px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border: 1px solid #C8C8C8;
+  outline: none;
+}
+
+.label{
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.login{
+  display: block;
+}
+
+.remember{
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+#submit-button{
+  background-color: limegreen;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 2px 1em 2px 1em;
+  border-radius: 25px;
+}
+
+#submit-button:hover{
+  background-color: green;
+}
+
+.lostPassword, .lostPassword:hover{
+  text-decoration: none;
+  color: green;
+}

@@ -1,0 +1,117 @@
+.Home{
+  text-align: center;
+}
+
+.imgDesc{
+  width:100%;
+  position: relative;
+}
+
+.profileImg{
+  width: 30%;
+  float:left;
+}
+
+.description{
+  position: relative;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.smallTitle{
+  color: yellow;
+  letter-spacing: 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.bigTitle{
+  font-weight: 700;
+  color: orange;
+}
+
+.addText{
+  display: inline-block;
+  color: yellow;
+  width: 170px;
+}
+
+.expFlav{
+  font-weight: bold;
+  padding: 1em 3em 1em 3em;
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: #EE82EE;
+  color: white;
+}
+
+.expFlav:hover{
+  text-decoration: none;
+  color: white;
+  background-color: purple;
+}
+
+.perksContainer{
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 3em;
+}
+
+.perk{
+  padding: 20px;
+  background-color: #000033;
+  color: white;
+}
+
+.reviewsTitle{
+  text-align: center;
+  padding-top: 1em;
+}
+
+.reviews{
+  display: inline-flex;
+  width: 70%;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.review{
+  padding-top: 1em;
+  width: 330px;
+  background-color: white;
+}
+
+.quote{
+  display: inline-block;
+  color: orange;
+  font-weight: bold;
+  font-size: 40px;
+  width: 55%;
+  padding-bottom: 1em;
+  text-shadow: 2px 2px #808080;
+}
+
+.leafHome {
+  color: lightgreen;
+  font-size: 200%;
+}
+
+.perk{
+  display: inline-flex;
+}
+
+.star{
+  color: orange;
+}
+
+.reviewQuote{
+  margin: auto;
+  width: 80%;
+  padding-bottom: 1em;
+}
+
+.name{
+  font-size: 20px;
+}

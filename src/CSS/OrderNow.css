@@ -1,0 +1,46 @@
+.parent{
+  padding: 2em 0 2em 0;
+}
+
+.OrderNow{
+  width: 70%;
+  margin: auto;
+  text-align: left;
+  background-color: white;
+  padding:2em 5em 4em 5em;
+}
+
+.return, .return:hover{
+  text-decoration: none;
+  color: black;
+  background-color: #87CEEB;
+  padding: 10px 20px 10px 20px;
+}
+
+.option{
+  display: flex;
+}
+
+.package{
+  margin: 0 0 10px 10px;
+  box-shadow: 0 0 6px #808080;
+}
+
+.choc{
+  padding: 10px;
+}
+
+.select{
+  padding: 7px;
+  margin: 6px;
+  border-color: #C8C8C8;
+}
+
+.addCart{
+  margin: 6px;
+  background-color: orange;
+  font-weight: bold;
+  border: none;
+  padding: 0 1em 0 1em;
+  border-radius: 20px;
+}

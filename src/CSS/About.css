@@ -1,0 +1,99 @@
+.About{
+  text-align: center;
+}
+
+.titleAbout{
+  font-weight: bold;
+  padding: 1em 0 1em 0;
+  font-size: 60px;
+  -webkit-animation:fadein 2s;
+}
+
+@keyframes fadein {
+    from {opacity: 0;
+          transform: translateY(15%);}
+}
+
+.topTitle{
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.numbers{
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 2em 10em 2em 10em;
+}
+
+.numDesc{
+  font-weight: bold;
+  font-size: 25px;
+  width: 250px;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+}
+
+.digit{
+  font-weight: bold;
+  font-size: 40px;
+  width: 100%;
+}
+
+.aboutInfo{
+  display: inline-flex;
+  align-items: flex-start;
+  text-align: left;
+  background-color: white;
+  padding: 6em 15em 6em 15em;
+}
+
+.paragraph{
+  padding: 2em;
+}
+
+.aboutImg{
+  padding: 2em;
+  width: 50%;
+}
+
+.titleLeafAbout{
+  position: absolute;
+  top: 265px;
+  left: 48%;
+  z-index: 1;
+  font-size: 500%;
+  color: green;
+  align-content: center;
+}
+
+.headBottom{
+  font-weight: 630;
+  font-size: 40px;
+}
+
+.perksList{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.perksList > *{
+  list-style-type: none;
+  padding: 0;
+}
+
+.check{
+  border: 2px solid #BADA55;
+  border-radius:50%;
+  margin-right: 5px;
+}
+
+.leafAbout{
+  color: lightgreen;
+  font-size: 400%;
+  display:block;
+}

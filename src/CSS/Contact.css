@@ -1,0 +1,67 @@
+.Contact{
+  text-align: center;
+}
+
+.contactTitle{
+  font-weight: 650;
+  font-size: 50px;
+  padding: 1em 0 1em 0;
+}
+
+.contactInfo{
+  display: inline-flex;
+  width: 60%;
+  justify-content: space-around;
+  background-color: white;
+  margin-bottom: 5em;
+}
+
+.contactInfo > * {
+  padding: 2em 6em 2em 6em;
+  margin: 2em;
+  border: 1px solid #C8C8C8;
+  font-weight: 600;
+}
+
+.location{
+  color: green;
+  font-size: 150%;
+}
+
+.titleLeaf{
+  position: absolute;
+  top: 230px;
+  left: 48%;
+  z-index: 1;
+  font-size: 500%;
+  color: green;
+  align-content: center;
+}
+
+.leaf{
+  color: lightgreen;
+  font-size: 400%;
+  margin: auto;
+  display:block;
+}
+
+.questions{
+  display: inline-flex;
+  max-width: 60%;
+  justify-content: space-around;
+  text-align: left;
+  text-align-last: left;
+  padding: 2em 0 2em 0;
+}
+
+.accordion{
+  width: 100%;
+}
+
+.toggle{
+  height: 55px;
+}
+
+.textAcc{
+  color: black;
+}

@@ -1,0 +1,76 @@
+.App{
+  text-align: center;
+}
+
+.header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index:2;
+}
+
+.navBar{
+  padding: 20px 0 20px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: #cdd3a7;
+  align-items: center;
+}
+
+.lineHeader{
+  margin: 0;
+  border-color: black;
+}
+
+.Links1 > *, .Links2 > *{
+  text-decoration: none;
+  padding: 7px;
+  color: black;
+}
+
+.Links1:hover > *, .Links2:hover > *{
+  text-decoration: none;
+}
+
+.truffles{
+  font-size: 40px;
+  color: orange;
+  font-weight: bold;
+}
+
+.truffles:hover{
+  color: orange;
+}
+
+.cart{
+  font-size: 150%;
+}
+
+.cart:hover, #home:hover, #menu:hover, #myAccount:hover, #orderNow:hover, #contact:hover, #about:hover{
+  color: green;
+}
+
+.footer{
+  background-color: #000033;
+}
+
+.footerPhoto{
+  width: 11%;
+  display: block;
+  padding: 4em 0 4em 0;
+  margin: auto;
+}
+
+.line{
+  border-color: grey;
+  margin: 0;
+}
+
+.footContainer{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 75%;
+  color: #909090;
+  padding: 3em 0 3em 0;
+}
