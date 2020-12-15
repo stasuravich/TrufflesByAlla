@@ -27,6 +27,7 @@ const OrderNow =props=>{
   ]
   useEffect(() =>{
     document.getElementById("orderNow").style.color="green";
+    document.title = "Order Now - Truffles by Alla";
   });
 
   return (

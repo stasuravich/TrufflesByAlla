@@ -10,6 +10,7 @@ const Contact =props=>{
 
   useEffect(() =>{
     document.getElementById("contact").style.color="green";
+    document.title = "Contact - Truffles by Alla";
   });
 
   const tabs1 = [

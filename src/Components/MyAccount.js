@@ -5,6 +5,7 @@ const MyAccount =props=>{
 
   useEffect(() =>{
     document.getElementById("myAccount").style.color="green";
+    document.title = "My Account - Truffles by Alla";
   });
 
   return (

@@ -17,9 +17,45 @@ const About =props=>{
 
   useEffect(() =>{
     document.getElementById("about").style.color="green";
+    document.title = "About - Truffles by Alla";
   });
 
+  const proof=[
+    {id: 0,
+    start: 4800,
+    end: 5000,
+    desc: "Curated Products"},
+    {id: 1,
+    start: 0,
+    end: 800,
+    desc: "Curated Products"},
+    {id: 2,
+    start:0,
+    end: 40,
+    desc: "Curated Categories"}
+  ]
 
+  const list1=[
+    {id: 0,
+    ingridient: "Fresh fruits"},
+    {id: 1,
+    ingridient: "Dry fruits"},
+    {id: 2,
+    ingridient: "Fresh vegetables"},
+    {id: 3,
+    ingridient: "Dried vegetables"},
+  ]
+
+  const list2=[
+    {id: 4,
+    ingridient: "Beauty products"},
+    {id: 5,
+    ingridient: "Milk products"},
+    {id: 6,
+    ingridient: "Organic honey"},
+    {id: 7,
+    ingridient: "Organic tea"},
+  ]
 
   return (
     <div className="About">
@@ -46,15 +82,10 @@ const About =props=>{
       <VisSensor onChange={visFunc} minTopValue={30} partialVisibility>
         <div className="numbers">
           <span className="numDesc">Numbers speak for themselves!</span>
-          <span>{visible ? <CountUp className="digit" separator="," start={4800} end={5000} duration={2.5} suffix='+'/> : 4800}
+          {proof.map(item=>(
+          <span key={item.id}>{visible ? <CountUp className="digit" separator="," start={item.start} end={item.end} duration={2.5} suffix='+'/> : item.start}
             <div>Curated Products</div>
-          </span>
-          <span>{visible ? <CountUp className="digit" start={0} end={800} duration={2.5} suffix='+'/> : 0}
-            <div>Curated Products</div>
-          </span>
-          <span>{visible ? <CountUp className="digit" start={0} end={40} duration={2.5} suffix='+'/> : 0}
-            <div>Product Categories</div>
-          </span>
+          </span>))}
         </div>
       </VisSensor>
       <div className="aboutInfo">
@@ -65,17 +96,11 @@ const About =props=>{
           <h2 className="headBottom">We deal with various quality organic products!</h2>
           <Leaf className="leafAbout"/>
           <div className="perksList">
-            <ul>
-              <li><Check className="check"/>Fresh fruits</li>
-              <li><Check className="check"/>Dry fruits</li>
-              <li><Check className="check"/>Fresh vegetables</li>
-              <li><Check className="check"/>Dried vegetables</li>
+            <ul>{list1.map(list=>(
+              <li key={list.id}><Check className="check"/>{list.ingridient}</li>))}
             </ul>
-            <ul>
-              <li>Beauty products</li>
-              <li>Milk products</li>
-              <li>Organic honey</li>
-              <li>Organic tea</li>
+            <ul>{list2.map(list=>(
+              <li key={list.id}><Check className="check"/>{list.ingridient}</li>))}
             </ul>
           </div>
         </div>
