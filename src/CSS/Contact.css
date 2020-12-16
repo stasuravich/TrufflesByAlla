@@ -38,6 +38,10 @@
   align-content: center;
 }
 
+.faqTitle{
+  font-weight: 600;
+}
+
 .leaf{
   color: lightgreen;
   font-size: 400%;
@@ -47,21 +51,66 @@
 
 .questions{
   display: inline-flex;
-  max-width: 60%;
-  justify-content: space-around;
-  text-align: left;
-  text-align-last: left;
+  width: 60%;
   padding: 2em 0 2em 0;
+  justify-content: space-between;
 }
 
-.accordion{
-  width: 100%;
+.accordionHalf{
+  width: 49%;
 }
 
 .toggle{
   height: 55px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+  display: inline-flex;
 }
 
-.textAcc{
-  color: black;
+.toggleOpen{
+  height: 55px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+  display: inline-flex;
+  color: green;
+}
+
+.toggle:focus, .toggleOpen:focus{
+  outline: 0
+}
+
+.be4Icon{
+  width: 100%;
+}
+
+.arrow{
+  font-size: 130%;
+}
+
+.arrowOpen{
+  font-size: 130%;
+  transform: rotate(90deg);
+}
+
+.collapse.show, .collapsing{
+  background-color: white;
+  text-align: left;
+  padding: 0 0 2em 5px;
+}
+
+.accordion.collapsed{
+  color: green;
+}
+
+.lineContact{
+  margin: 0;
+  border-color: #ffcc99;
 }

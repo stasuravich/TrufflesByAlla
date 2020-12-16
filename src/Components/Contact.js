@@ -1,13 +1,15 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import '../CSS/Contact.css';
-import {Accordion, Card, Button} from 'react-bootstrap';
+import {Accordion} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {RiLeafFill as LeafHeader} from 'react-icons/ri';
 import {GiOakLeaf as Leaf} from 'react-icons/gi';
-import {MdLocationOn as Location} from 'react-icons/md'
+import {MdLocationOn as Location} from 'react-icons/md';
+import {IoMdArrowDropright as Arrow} from 'react-icons/io';
 
 const Contact =props=>{
-
+  //console.log("Contact")
+  const [activeIds, setActiveIds] = useState([]);
   useEffect(() =>{
     document.getElementById("contact").style.color="green";
     document.title = "Contact - Truffles by Alla";
@@ -24,11 +26,19 @@ const Contact =props=>{
   const tabs2 = [
     { id: 4, label: "Would you deliver for free if I live just outside of Los Angeles County?",
       description: "Please contact me by email through the Contact page." },
-    { id:5, label: "Do you cater?",
+    { id: 5, label: "Do you cater?",
       description: "Yes, catering is one of the offered services. Please refer to the Contact page and email me with your special request." },
     { id: 6, label: "Are the truffles raw?",
       description: "Some of the recipes are and some are’t. The only reason some of them aren’t is because I roast the nuts." }
   ];
+
+  const toggle=id =>{
+    if (activeIds.includes(id)) {
+      setActiveIds(activeIds.filter((item)=> item !== id));
+    } else {
+      setActiveIds(activeIds.concat(id));
+    }
+  }
 
   return (
     <div className="Contact">
@@ -38,37 +48,31 @@ const Contact =props=>{
         <span><Location className="location"/>Huntington Beach, CA, USA</span>
       </div>
       <LeafHeader className="titleLeaf"/>
-      <h2>Frequetly Asked Questions!</h2>
+      <h2 className="faqTitle">Frequetly Asked Questions!</h2>
       <Leaf className="leaf"/>
       <div className="questions" >
-        <div className="accordion">
+        <div className="accordionHalf">
           {tabs1.map(tab=>(
           <Accordion key={tab.id}>
-            <Card>
-              <Card.Header>
-                <Accordion.Toggle className="toggle" as={Button} variant="link" eventKey="0">
-                  {tab.label}
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>{tab.description}</Card.Body>
-              </Accordion.Collapse>
-            </Card>
+            <Accordion.Toggle className={activeIds.includes(tab.id) ? "toggleOpen" : "toggle"} eventKey={tab.id} onClick={() => toggle(tab.id)}>
+              <span className="be4Icon">{tab.label}</span><Arrow className={activeIds.includes(tab.id) ? "arrowOpen" : "arrow"}/>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey={tab.id}>
+              <span>{tab.description}</span>
+            </Accordion.Collapse>
+            <hr className="lineContact"/>
           </Accordion>))}
         </div>
-        <div className="accordion">
+        <div className="accordionHalf">
           {tabs2.map(tab=>(
           <Accordion key={tab.id}>
-            <Card>
-              <Card.Header>
-                <Accordion.Toggle className="toggle" as={Button} variant="link" eventKey="0">
-                  {tab.label}
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>{tab.description}</Card.Body>
-              </Accordion.Collapse>
-            </Card>
+            <Accordion.Toggle className={activeIds.includes(tab.id) ? "toggleOpen" : "toggle"} eventKey={tab.id} onClick={() => toggle(tab.id)}>
+            <span className="be4Icon">{tab.label}</span><Arrow className={activeIds.includes(tab.id) ? "arrowOpen" : "arrow"}/>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey={tab.id}>
+              <span>{tab.description}</span>
+            </Accordion.Collapse>
+            <hr className="lineContact"/>
           </Accordion>))}
         </div>
       </div>
