@@ -55,6 +55,14 @@
   padding: 2em;
 }
 
+.paraBody::first-letter{
+  font-size: 300%;
+  color: limegreen;
+  float: left;
+  line-height: 0.9;
+  padding: 0 7px 0 0;
+}
+
 .aboutImg{
   padding: 2em;
   width: 50%;

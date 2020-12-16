@@ -63,7 +63,7 @@ const About =props=>{
       <div className="aboutInfo">
         <span className="paragraph">
           <h2 className="topTitle">How It All Started..</h2>
-          <p>When I was growing up, chocolate truffles were my favorite treats of all.
+          <p className="paraBody">When I was growing up, chocolate truffles were my favorite treats of all.
           They were expensive and my family could only afford to buy them on special occasions.
           When I got older I started to make my own money, but like any other girl in her older teenage years, I was now worried about my figure.
           Even though I could now afford to eat my favorite desert, I couldn’t do it as frequently as I wanted to.
