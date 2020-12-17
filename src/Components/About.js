@@ -84,7 +84,7 @@ const About =props=>{
           <span className="numDesc">Numbers speak for themselves!</span>
           {proof.map(item=>(
           <span key={item.id}>{visible ? <CountUp className="digit" separator="," start={item.start} end={item.end} duration={2.5} suffix='+'/> : item.start}
-            <div>Curated Products</div>
+            <div>{item.desc}</div>
           </span>))}
         </div>
       </VisSensor>
