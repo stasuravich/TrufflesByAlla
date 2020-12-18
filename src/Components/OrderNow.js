@@ -1,7 +1,12 @@
-import {useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import '../CSS/OrderNow.css';
+import Paypal from './Paypal.js';
 
 const OrderNow =props=>{
+  //console.log("OrderNow")
+  const [checkout, setCheckout]=useState(null);
+  const selected=useRef([0, 0, 0, 0, 0, 0, 0]);
+
   const options = [
     {id: 0,
     image: "1",
@@ -25,10 +30,53 @@ const OrderNow =props=>{
     image: "7",
     choc: "Hazelnut Truffles:"}
   ]
+
+  const firstSelectOpt=[
+    {id: 0,
+    pieces: 8,
+    money: 20.00},
+    {id: 1,
+    pieces: 12,
+    money: 30.00},
+    {id: 2,
+    pieces: 20,
+    money: 50.00},
+    {id: 3,
+    pieces: 30,
+    money: 75.00},
+    {id: 4,
+    pieces: 40,
+    money: 100.00}
+  ]
+
+  const selectOptions=[
+    {id: 0,
+    pieces: 4,
+    money: 10.00},
+    {id:1,
+    pieces: 6,
+    money: 15.00},
+    {id: 2,
+    pieces: 8,
+    money: 20},
+    {id: 3,
+    pieces: 10,
+    money: 25.00},
+    {id: 4,
+    pieces: 12,
+    money: 30.00},
+    {id: 5,
+    pieces: 20,
+    money: 50.00},
+    {id: 6,
+    pieces: 30,
+    money: 75.00}
+  ]
+
   useEffect(() =>{
     document.getElementById("orderNow").style.color="green";
     document.title = "Order Now - Truffles by Alla";
-  });
+  }, []);
 
   return (
     <div className="parent">
@@ -42,17 +90,15 @@ const OrderNow =props=>{
             <div className="package">
               <div className="choc">{option.choc}</div>
               <hr className="line"/>
-              <select className="select">
-                <option>4 pieces $10.00 USD</option>
-                <option>6 pieces $15.00 USD</option>
-                <option>8 pieces $20.00 USD</option>
-                <option>10 pieces $25.00 USD</option>
-                <option>12 pieces $30.00 USD</option>
-                <option>20 pieces $50.00 USD</option>
-                <option>30 pieces $75.00 USD</option>
+              <select className="select" onChange={e=>selected.current[option.id]= e.target.value}>
+                {option.choc==="Chocolatier Choice Assortment Box:" ? firstSelectOpt.map(option=>(
+                  <option value={option.id} key={option.id}>{option.pieces} pieces ${option.money} USD</option>)) :
+                selectOptions.map(option=>(
+                  <option value={option.id} key={option.id}>{option.pieces} pieces ${option.money} USD</option>))}
               </select>
               <hr className="line"/>
-              <button className="addCart">Add to Cart</button>
+              {checkout===option.id ? <Paypal options={options} id= {option.id} selected={selected} firstSelectOpt={firstSelectOpt} selectOptions={selectOptions}/> : (
+                <button className="addCart" onClick={()=> setCheckout(option.id)}>Add to Cart</button>)}
             </div>
           </div>))}
       </div>

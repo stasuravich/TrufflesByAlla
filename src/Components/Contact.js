@@ -8,12 +8,12 @@ import {MdLocationOn as Location} from 'react-icons/md';
 import {IoMdArrowDropright as Arrow} from 'react-icons/io';
 
 const Contact =props=>{
-  //console.log("Contact")
+  console.log("Contact")
   const [activeIds, setActiveIds] = useState([]);
   useEffect(() =>{
     document.getElementById("contact").style.color="green";
     document.title = "Contact - Truffles by Alla";
-  });
+  }, []);
 
   const tabs1 = [
     { id: 1, label: "Are the truffles vegan?",

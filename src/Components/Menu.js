@@ -6,7 +6,7 @@ const Menu =props=>{
   useEffect(() =>{
     document.getElementById("menu").style.color="green";
     document.title = "Menu - Truffles by Alla";
-  });
+  }, []);
 
   return (
     <div className="Menu">

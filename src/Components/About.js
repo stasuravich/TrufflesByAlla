@@ -18,7 +18,7 @@ const About =props=>{
   useEffect(() =>{
     document.getElementById("about").style.color="green";
     document.title = "About - Truffles by Alla";
-  });
+  }, []);
 
   const proof=[
     {id: 0,

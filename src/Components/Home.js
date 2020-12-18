@@ -9,7 +9,7 @@ const Home =props=>{
   useEffect(() =>{
     document.getElementById("home").style.color="green";
     document.title = "Truffles by Alla Vegan Chocolate Truffles";
-  });
+  }, []);
 
   const perks = [
     { id: 0, label: "Free Delivery",
