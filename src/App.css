@@ -65,22 +65,9 @@
 
 @media (max-width: 415px){
   .header{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index:2;
-    background-color: #cdd3a7;
-    display: block;
-    width: 100%;
     height: 130px;
-    padding: 1em 0 1em 0;
-    border-bottom: solid black 1px;
   }
   .navbar-toggler, .navbar-toggler.collapsed, .navbar-toggler:focus{
-    border: none !important;
-    outline: none;
-    padding-left: 20px !important;
-    padding-right: 0 !important;
     padding-top: 22px !important;
   }
   .cartContainer{
@@ -91,11 +78,6 @@
   }
   .truffles, .truffles:hover{
     font-size: 33px;
-    color: orange;
-    font-weight: bold;
-    float: right;
-    text-decoration: none;
-    padding-right: 20px;
     max-width: 7em;
     text-align: right;
   }
@@ -110,7 +92,6 @@
 @media (max-width: 991px){
   .cart{
     font-size: 300%;
-    color: green;
     margin-left: 0;
   }
 
@@ -144,6 +125,7 @@
 
 .footerPhoto{
   width: 11%;
+  min-width: 10em;
   display: block;
   padding: 4em 0 4em 0;
   margin: auto;
@@ -160,4 +142,10 @@
   width: 75%;
   color: #909090;
   padding: 3em 0 3em 0;
+}
+
+@media (max-width: 760px){
+  .footContainer{
+    flex-direction: column;
+  }
 }

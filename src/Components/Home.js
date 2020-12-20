@@ -54,7 +54,7 @@ const Home =props=>{
         <div key={perk.id} className="perk">
           <div><Leaf className="leafHome"/></div>
           <div>
-            <h2>{perk.label}</h2>
+            <h2 className="perkLabel" >{perk.label}</h2>
             <span>{perk.description}</span>
           </div>
         </div>))}

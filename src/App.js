@@ -9,7 +9,7 @@ import OrderNow from './Components/OrderNow';
 import Contact from './Components/Contact';
 import About from './Components/About';
 import LostPassword from './Components/LostPassword';
-import footerPhoto from './Photos/IMG-4575.jpg';
+import FooterPhoto from './Photos/IMG-4575.jpg';
 import {GiHamburgerMenu as Ham} from 'react-icons/gi';
 import {AiOutlineClose as Close} from 'react-icons/ai';
 import {Navbar, Nav} from 'react-bootstrap';
@@ -68,7 +68,7 @@ function App() {
         </Switch>
       </Router>
       <div className="footer">
-        <img src={footerPhoto} alt="Footer" className="footerPhoto"></img>
+        <img src={FooterPhoto} alt="Footer" className="footerPhoto"></img>
         <hr className="line"/>
         <div className="footContainer">
           <span>Copyright © 2020 | Truffles by Alla</span>
