@@ -2,12 +2,12 @@ import {useEffect} from "react";
 import ProfImg from '../Photos/IMG_0361.JPG';
 import '../CSS/Home.css';
 import {GiOakLeaf as Leaf} from 'react-icons/gi';
-import {AiFillStar as Star} from 'react-icons/ai'
+import {AiFillStar as Star} from 'react-icons/ai';
 
 const Home =props=>{
   //console.log("Home");
   useEffect(() =>{
-    document.getElementById("home").style.color="green";
+    document.getElementsByName("home").forEach(function(elem, idx) {elem.style.color = 'green';})
     document.title = "Truffles by Alla Vegan Chocolate Truffles";
   }, []);
 

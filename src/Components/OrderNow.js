@@ -74,7 +74,7 @@ const OrderNow =props=>{
   ]
 
   useEffect(() =>{
-    document.getElementById("orderNow").style.color="green";
+    document.getElementsByName("orderNow").forEach(function(elem, idx) {elem.style.color = 'green';})
     document.title = "Order Now - Truffles by Alla";
   }, []);
 

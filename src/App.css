@@ -7,48 +7,135 @@
   position: sticky;
   top: 0;
   z-index:2;
-}
-
-.navBar{
-  padding: 20px 0 20px 0;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
   background-color: #cdd3a7;
-  align-items: center;
+  display: block;
+  width: 100%;
+  height: 95px;
+  padding: 1em 0 0 0;
+  border-bottom: solid black 1px;
 }
 
-.lineHeader{
-  margin: 0;
-  border-color: black;
+.content{
+  width: 75em;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.Links1 > *, .Links2 > *{
-  text-decoration: none;
-  padding: 7px;
+.navbar{
+  float: left;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  position: absolute !important;
+  z-index: -1;
+}
+
+#basic-navbar-nav{
+  background-color: #cdd3a7;
+  padding: 3px 0 0 0;
+}
+
+.navbar-toggler, .navbar-toggler.collapsed, .navbar-toggler:focus{
+  border: none !important;
+  outline: none;
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+}
+
+.icon{
+  color:white;
+  font-size: 180%;
+}
+
+.elem{
+  padding-left: 20px !important;
+  padding-right: 0 !important;
   color: black;
-}
-
-.Links1:hover > *, .Links2:hover > *{
   text-decoration: none;
+
 }
 
-.truffles{
+.truffles, .truffles:hover{
   font-size: 40px;
   color: orange;
   font-weight: bold;
+  float: right;
+  text-decoration: none;
+  padding-right: 20px;
 }
 
-.truffles:hover{
-  color: orange;
+@media (max-width: 415px){
+  .header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index:2;
+    background-color: #cdd3a7;
+    display: block;
+    width: 100%;
+    height: 130px;
+    padding: 1em 0 1em 0;
+    border-bottom: solid black 1px;
+  }
+  .navbar-toggler, .navbar-toggler.collapsed, .navbar-toggler:focus{
+    border: none !important;
+    outline: none;
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+    padding-top: 22px !important;
+  }
+  .cartContainer{
+    position: absolute;
+    left: 65px;
+    top: 22px;
+    margin: auto;
+  }
+  .truffles, .truffles:hover{
+    font-size: 33px;
+    color: orange;
+    font-weight: bold;
+    float: right;
+    text-decoration: none;
+    padding-right: 20px;
+    max-width: 7em;
+    text-align: right;
+  }
 }
 
 .cart{
-  font-size: 150%;
+  font-size: 200%;
+  color: green;
+  margin-left: 20px;
 }
 
-.cart:hover, #home:hover, #menu:hover, #myAccount:hover, #orderNow:hover, #contact:hover, #about:hover{
+@media (max-width: 991px){
+  .cart{
+    font-size: 300%;
+    color: green;
+    margin-left: 0;
+  }
+
+  .elem{
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+    color: black;
+    text-decoration: none;
+    border-bottom: solid grey 1px;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 415px){
+  .cartContainer{
+    position: absolute;
+    left: 65px;
+    top: 5px;
+    margin: auto;
+  }
+}
+
+.cart:hover, .cartHam:hover, a[name=home]:hover, a[name=menu]:hover, a[name=myAccount]:hover, a[name=orderNow]:hover, a[name=contact]:hover, a[name=about]:hover{
   color: green;
+  text-decoration: none;
 }
 
 .footer{

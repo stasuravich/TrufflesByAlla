@@ -4,7 +4,7 @@ import '../CSS/MyAccount.css';
 const MyAccount =props=>{
 
   useEffect(() =>{
-    document.getElementById("myAccount").style.color="green";
+    document.getElementsByName("myAccount").forEach(function(elem, idx) {elem.style.color = 'green';})
     document.title = "My Account - Truffles by Alla";
   }, []);
 

@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {BiShoppingBag as Bag} from 'react-icons/bi';
@@ -9,26 +10,51 @@ import Contact from './Components/Contact';
 import About from './Components/About';
 import LostPassword from './Components/LostPassword';
 import footerPhoto from './Photos/IMG-4575.jpg';
+import {GiHamburgerMenu as Ham} from 'react-icons/gi';
+import {AiOutlineClose as Close} from 'react-icons/ai';
+import {Navbar, Nav} from 'react-bootstrap';
 
 function App() {
+  const [navIcon, setNavIcon]= useState(false);
+  console.log("App");
+
+  const underBar=[
+    {id: "home",
+    href: "/",
+    page: "Home"},
+    {id: "menu",
+    href: "/menu",
+    page: "Menu"},
+    {id: "myAccount",
+    href: "/my-account",
+    page: "My account"},
+    {id: "orderNow",
+    href: "/order-now",
+    page: "Order now"},
+    {id: "contact",
+    href: "/contact",
+    page: "Contact"},
+    {id: "about",
+    href: "/about",
+    page: "About"}
+  ]
+
   return (
     <div className="App">
       <div className="header">
-        <div className="navBar">
-          <div className="Links1">
-            <a className="cart" href="/order-now"><Bag/></a>
-            <a id="home" href="/">Home</a>
-            <a id="menu" href="/menu">Menu</a>
-            <a id="myAccount" href="/my-account">My account</a>
-            <a id="orderNow" href="/order-now">Order now</a>
-            <a id="contact" href="/contact">Contact</a>
-            <a id="about" href="/about">About</a>
-          </div>
-          <div className="Links2">
-            <a className="truffles" href="/">Truffles by Alla</a>
-          </div>
+        <div className="content">
+          <Navbar bg="#cdd3a7" expand="lg">
+            <Navbar.Toggle onClick={()=>setNavIcon(!navIcon)}>
+              <span className="icon">{!navIcon ? <Ham/> : <Close/>}</span>
+            </Navbar.Toggle>
+            <a className="cartContainer" href="/order-now"><Bag className="cart" /></a>
+            <Navbar.Collapse id="basic-navbar-nav">
+            {underBar.map((item, idx)=>(
+              <Nav.Link key={idx} className="elem" name={item.id} href={item.href}>{item.page}</Nav.Link>))}
+            </Navbar.Collapse>
+          </Navbar>
+          <a className="truffles" href="/">Truffles by Alla</a>
         </div>
-        <hr className="lineHeader"/>
       </div>
       <Router>
         <Switch>

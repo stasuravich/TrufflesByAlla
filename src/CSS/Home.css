@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+/* @media(min-width: 1020px) */
+
 .imgDesc{
   width:100%;
   position: relative;
@@ -10,6 +12,7 @@
 .profileImg{
   width: 30%;
   float:left;
+  padding-top: 2em;
 }
 
 .description{

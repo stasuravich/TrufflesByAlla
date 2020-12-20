@@ -4,7 +4,7 @@ import '../CSS/Menu.css';
 const Menu =props=>{
 
   useEffect(() =>{
-    document.getElementById("menu").style.color="green";
+    document.getElementsByName("menu").forEach(function(elem, idx) {elem.style.color = 'green';})
     document.title = "Menu - Truffles by Alla";
   }, []);
 

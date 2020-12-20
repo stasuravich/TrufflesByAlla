@@ -16,7 +16,7 @@ const About =props=>{
   }
 
   useEffect(() =>{
-    document.getElementById("about").style.color="green";
+    document.getElementsByName("about").forEach(function(elem, idx) {elem.style.color = 'green';})
     document.title = "About - Truffles by Alla";
   }, []);
 

@@ -11,7 +11,7 @@ const Contact =props=>{
   console.log("Contact")
   const [activeIds, setActiveIds] = useState([]);
   useEffect(() =>{
-    document.getElementById("contact").style.color="green";
+    document.getElementsByName("contact").forEach(function(elem, idx) {elem.style.color = 'green';})
     document.title = "Contact - Truffles by Alla";
   }, []);
 
