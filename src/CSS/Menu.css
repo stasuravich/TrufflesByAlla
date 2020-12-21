@@ -8,7 +8,8 @@
 
 .flavors{
   display: inline-flex;
-  width: 80%;
+  width: 90em;
+  max-width: 97%;
   justify-content: space-around;
   padding: 10px 0 10px 0;
 }
