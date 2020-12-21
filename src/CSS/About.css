@@ -19,40 +19,97 @@
   padding-bottom: 1em;
 }
 
+.numBack{
+  background-color: black;
+}
+
 .numbers{
   display: inline-flex;
-  width: 100%;
+  width: 80em;
+  max-width: 97%;
   justify-content: space-around;
-  background-color: black;
   color: white;
-  padding: 2em 10em 2em 10em;
+  padding: 2em 0 2em 0;
+}
+
+.numbers > *{
+  width: 250px;
 }
 
 .numDesc{
   font-weight: bold;
   font-size: 25px;
-  width: 250px;
   text-align: left;
-  display: inline-flex;
-  align-items: center;
 }
 
 .digit{
   font-weight: bold;
   font-size: 40px;
-  width: 100%;
 }
 
-.aboutInfo{
+.body{
+  background-color: white;
+}
+
+.aboutInfo, .bottomInfo{
+  width: 80em;
+  max-width: 97%;
   display: inline-flex;
   align-items: flex-start;
   text-align: left;
-  background-color: white;
-  padding: 6em 15em 6em 15em;
+  padding: 6em 0 6em 0;
+}
+
+.aboutImg, .bottomImg{
+  padding: 1em;
+  width: 50%;
+}
+
+.perksList{
+  display: flex;
+  justify-content: space-between;
+  max-width: 25em;
+  text-align: left;
+}
+
+.perksList > *{
+  list-style-type: none;
+  padding: 0;
+}
+
+.headBottom{
+  font-weight: 630;
+  font-size: 40px;
+}
+
+@media (max-width: 767px){
+  .aboutInfo, .bottomInfo{
+    flex-direction: column;
+    text-align: center;
+  }
+  .aboutImg{
+    width: 100%;
+  }
+  .bottomImg{
+    width: 100%;
+    order: 2;
+  }
+  .numbers{
+    flex-direction: column;
+  }
+  .numbers > *{
+    width: 100%;
+  }
+  .numDesc{
+    text-align: center;
+  }
+  .perksList{
+    max-width: 28em;
+  }
 }
 
 .paragraph{
-  padding: 2em;
+  padding: 1em;
 }
 
 .paraBody::first-letter{
@@ -61,11 +118,6 @@
   float: left;
   line-height: 0.9;
   padding: 0 7px 0 0;
-}
-
-.aboutImg{
-  padding: 2em;
-  width: 50%;
 }
 
 .titleLeafAbout{
@@ -78,22 +130,6 @@
   align-content: center;
 }
 
-.headBottom{
-  font-weight: 630;
-  font-size: 40px;
-}
-
-.perksList{
-  display: inline-flex;
-  justify-content: space-between;
-  width: 80%;
-}
-
-.perksList > *{
-  list-style-type: none;
-  padding: 0;
-}
-
 .check{
   border: 2px solid #BADA55;
   border-radius:50%;
@@ -103,5 +139,6 @@
 .leafAbout{
   color: lightgreen;
   font-size: 400%;
-  display:block;
+  display: inline-block;
+
 }

@@ -3,16 +3,23 @@
 }
 
 .MyAccount{
-  width: 70%;
+  width: 75em;
+  max-width: 97%;
   margin: auto;
   text-align: left;
   background-color: white;
   padding:2em 5em 4em 5em;
 }
 
+@media (max-width: 991px){
+  .MyAccount{
+    padding: 1em;
+  }
+}
+
 .form{
   border: 1px solid #C8C8C8;
-  padding: 2em;
+  padding: 20px;
 }
 
 .asteric{

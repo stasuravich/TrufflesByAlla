@@ -10,14 +10,16 @@
 
 .contactInfo{
   display: inline-flex;
-  width: 60%;
+  width: 70em;
+  max-width: 97%;
   justify-content: space-around;
   background-color: white;
   margin-bottom: 5em;
 }
 
 .contactInfo > * {
-  padding: 2em 6em 2em 6em;
+  width: 100%;
+  padding: 2em 0 2em 0;
   margin: 2em;
   border: 1px solid #C8C8C8;
   font-weight: 600;
@@ -51,13 +53,31 @@
 
 .questions{
   display: inline-flex;
-  width: 60%;
+  width: 70em;
+  max-width: 97%;
   padding: 2em 0 2em 0;
   justify-content: space-between;
 }
 
 .accordionHalf{
   width: 49%;
+}
+
+@media (max-width: 767px){
+  .contactInfo{
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactInfo > *{
+    margin: 2em 0 2em 0;
+    width: 95%;
+  }
+  .questions{
+    flex-direction: column;
+  }
+  .accordionHalf{
+    width: 100%;
+  }
 }
 
 .toggle{

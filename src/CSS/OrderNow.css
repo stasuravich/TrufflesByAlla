@@ -3,7 +3,8 @@
 }
 
 .OrderNow{
-  width: 70%;
+  width: 75em;
+  max-width: 97%;
   margin: auto;
   text-align: left;
   background-color: white;
@@ -24,6 +25,7 @@
 .package{
   margin: 0 0 10px 10px;
   box-shadow: 0 0 6px #808080;
+  width: 300px;
 }
 
 .choc{

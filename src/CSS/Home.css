@@ -5,19 +5,19 @@
 .imgDesc{
   width:100%;
   position: relative;
+  align-items: flex-start;
 }
 
 .profileImg{
   width:30%;
-  min-width: 360px;
   float:left;
   margin-top:2em;
+
 }
 
 .description{
-  position: relative;
-  text-align: center;
-  padding-top: 15%;
+  position: absolute;
+  padding: 11% 15% 0 45%;
 }
 
 .smallTitle{
@@ -53,34 +53,23 @@
   background-color: purple;
 }
 
-@media(max-width: 1000px){
-  .imgDesc{
-    display: flex;
-    padding: 0 1em 0 1em;
-  }
-  .profileImg{
-    flex-basis: 100%;
-    margin:2em 0 0 0;
-  }
-  .description{
-    margin: 0 1em 0 1em;
-    flex-basis: 100%;
-  }
-}
-
 .perksContainer{
+  width: 95em;
+  max-width: 100%;
   display: inline-flex;
-  width: 85%;
   justify-content: space-around;
   padding-top: 3em;
+
 }
 
 .perk{
+  display: inline-flex;
   padding: 20px;
   background-color: #000033;
   color: white;
   text-align: left;
-  max-width: 270px;
+  margin: 0 1em 0 1em;
+  flex: 1 1 310px;
 }
 
 .perkLabel{
@@ -94,7 +83,8 @@
 
 .reviews{
   display: inline-flex;
-  width: 70%;
+  width: 75em;
+  max-width: 96%;
   justify-content: space-around;
   text-align: center;
   padding-top: 1em;
@@ -104,6 +94,63 @@
   padding-top: 1em;
   width: 330px;
   background-color: white;
+  margin: 0 7px 0 7px;
+}
+
+@media(max-width: 1000px){
+  .break{
+    content: "";
+    font-size: 0;
+  }
+  .perksContainer{
+    flex-flow: row wrap;
+  }
+  .perk{
+    flex: 1 1 305px;
+    margin-bottom: 1em;
+  }
+}
+
+@media(max-width: 1000px) and (min-width: 738px){
+  .imgDesc{
+    display: flex;
+    padding: 0 1em 0 1em;
+  }
+  .profileImg{
+    flex-basis: 100%;
+  }
+  .description{
+    position: relative;
+    flex-basis: 100%;
+    padding: 20% 1em 0 1em;
+  }
+}
+
+@media(max-width: 738px){
+  .imgDesc{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em 0 1em;
+  }
+  .description{
+    position: relative;
+    padding: 3% 5px 0 5px;
+  }
+  .profileImg{
+    order: 2;
+    width: 100%;
+    padding: 0 1em 0 1em;
+  }
+  .reviews{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review{
+    margin-bottom: 1em;
+    width: 90%;
+  }
+
 }
 
 .quote{
@@ -111,7 +158,8 @@
   color: orange;
   font-weight: bold;
   font-size: 40px;
-  width: 55%;
+  width: 22em;
+  max-width: 95%;
   padding-bottom: 1em;
   text-shadow: 2px 2px #808080;
 }
@@ -119,10 +167,6 @@
 .leafHome {
   color: lightgreen;
   font-size: 200%;
-}
-
-.perk{
-  display: inline-flex;
 }
 
 .star{

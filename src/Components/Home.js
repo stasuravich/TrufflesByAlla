@@ -38,14 +38,13 @@ const Home =props=>{
   ]
   return (
     <div className="Home">
-
       <div className="imgDesc">
         <img src={ProfImg} alt="profile_pic" className="profileImg"/>
         <div className="description">
           <h2 className="smallTitle">All NATURAL INGRIDIENTS</h2>
           <h1 className="bigTitle">Organic Vegan Chocolate Truffles</h1>
           <span className="addText">So delicious, you won't believe they are also so healthy, but it's true, they are!</span>
-          <br/><br/><br/><br/>
+          <br/><br/><br className="break"/><br className="break"/>
           <a className="expFlav" href="/menu">EXPLORE THE FLAVORS</a>
         </div>
       </div>
