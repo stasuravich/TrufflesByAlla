@@ -95,13 +95,17 @@
     order: 2;
   }
   .numbers{
-    flex-direction: column;
+    flex-flow: row wrap;
   }
-  .numbers > *{
-    width: 100%;
+  .digSpan{
+    flex: 1 1 150px;
+  }
+  .digit{
+    font-size: 25px;
   }
   .numDesc{
     text-align: center;
+    width: 100%;
   }
   .perksList{
     max-width: 28em;

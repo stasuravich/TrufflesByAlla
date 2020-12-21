@@ -85,7 +85,7 @@ const About =props=>{
             <div className="numbers">
               <span className="numDesc">Numbers speak for themselves!</span>
               {proof.map(item=>(
-              <span key={item.id}>{visible ? <CountUp className="digit" separator="," start={item.start} end={item.end} duration={2.5} suffix='+'/> : item.start}
+              <span key={item.id} className="digSpan">{visible ? <CountUp className="digit" separator="," start={item.start} end={item.end} duration={2.5} suffix='+'/> : item.start}
                 <div>{item.desc}</div>
               </span>))}
             </div>
